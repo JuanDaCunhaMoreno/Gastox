@@ -28,7 +28,7 @@ def executar():
             print("Gasto adicionado!")
 
         elif opcao == '2':
-            editar_id = input("Digite o ID para editira!")
+            editar_id = input("Digite o ID para editar!")
             print("Deixe em branco para manter mesmo valor!")
 
             novo_valor = input("Novo valor: ")
