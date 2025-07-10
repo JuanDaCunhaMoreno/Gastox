@@ -8,3 +8,4 @@ class Despesa:
         self.categoria = categoria
     def __str__(self):
         return f"{self.id} | {self.valor:.2f} | {self.descricao} | {self.data} | {self.categoria}" 
+    
