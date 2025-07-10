@@ -1,7 +1,7 @@
 #Exportador
 import csv
 
-def exportar_despesas(lista_despesas, nome_arquivo="Despesas_exportadas"):
+def exportar_despesas(lista_despesas, nome_arquivo="Despesas_exportadas.csv"):
     with open(nome_arquivo, mode="w", newline="", encoding="utf-8") as arquivo_csv:
         writer = csv.writer(arquivo_csv)
 
