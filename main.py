@@ -2,6 +2,7 @@ from relatorios import tot_categoria, estat_gerais
 from models import Despesa
 from database import adicionar_despesa, listar_despesas, remover_despesas, editar_despesa
 from time import sleep
+from exportador import exportar_despesas
 
 def exibir_menu():
     print("\n1 - Cadastrar gasto")
@@ -73,6 +74,10 @@ def executar():
                 print(f"Média por despesa: R$ {estat['media']:.2f}")
                 print(f"Maior gasto: {estat['maior'].valor:.2f} ({estat['maior'].descricao})")
                 print(f"Menor gasto: {estat['menor'].valor:.2f} ({estat['menor'].descricao})")
+
+        elif opcao == '7':
+            nome_arquivo = exportar_despesas(listar_despesas())
+            print(f"Despesas exportadas com sucesso para o arquivo: {nome_arquivo}")
 
         elif opcao == '0':
             print("Saindo...")
