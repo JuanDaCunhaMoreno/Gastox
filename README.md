@@ -19,14 +19,14 @@ Sistema simples de controle de gastos pessoais via terminal, com suporte a cadas
 
 ## 🖥️ Interface (menu via terminal)
 
-1 - Cadastrar gasto
-2 - Editar gasto
-3 - Remover gasto
-4 - Listar gastos
-5 - Exibir total por categoria
-6 - Estatísticas gerais
-7 - Exportar dados
-0 - Sair
+- 1 - Cadastrar gasto
+- 2 - Editar gasto
+- 3 - Remover gasto
+- 4 - Listar gastos
+- 5 - Exibir total por categoria
+- 6 - Estatísticas gerais
+- 7 - Exportar dados
+- 0 - Sair
 
 ---
 
