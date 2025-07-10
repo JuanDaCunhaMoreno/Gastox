@@ -1,5 +1,5 @@
 from models import Despesa
-from database import adicionar_despesa, listar_despesas, remover_despesas
+from database import adicionar_despesa, listar_despesas, remover_despesas, editar_despesa
 from time import sleep
 
 def exibir_menu():
@@ -27,6 +27,21 @@ def executar():
             print("Gasto adicionado!")
 
         elif opcao == '2':
+            editar_id = input("Digite o ID para editira!")
+            print("Deixe em branco para manter mesmo valor!")
+
+            novo_valor = input("Novo valor: ")
+            novo_valor = float(novo_valor) if novo_valor else None
+            nova_descricao = input("Nova descrição: ") or None
+            nova_data = input("Nova data (dd/mm/aaaa): ") or None
+            nova_categoria = input("Nova categoria: ") or None
+
+            sucesso = editar_despesa(editar_id, novo_valor, nova_descricao, nova_data, nova_categoria)
+
+            if sucesso:
+                print("Despesa editada com sucesso!")
+            else:
+                print("Despesa não encontrada!")
 
         elif opcao == '3':
             removerID = input("Digite o ID para ser removido: ")
