@@ -1,4 +1,4 @@
-from relatorios import tot_categoria
+from relatorios import tot_categoria, estat_gerais
 from models import Despesa
 from database import adicionar_despesa, listar_despesas, remover_despesas, editar_despesa
 from time import sleep
@@ -60,6 +60,19 @@ def executar():
             print("\nTotal de gastos por categoria: ")
             for categoria, total in totais.items():
                 print(f"{categoria}: R$ {total:.2f}")
+
+        elif opcao == '6':
+            estat = estat_gerais(listar_despesas())
+
+            if estat is None:
+                print("Nenhuma despesa registrada.")
+            else:
+                print("\n Estatísticas Gerais:")
+                print(f"Total de gastos R$ {estat['total']:.2f}")
+                print(f"Quantidade de despesas: {estat['quantidade']}")
+                print(f"Média por despesa: R$ {estat['media']:.2f}")
+                print(f"Maior gasto: {estat['maior'].valor:.2f} ({estat['maior'].descricao})")
+                print(f"Menor gasto: {estat['menor'].valor:.2f} ({estat['menor'].descricao})")
 
         elif opcao == '0':
             print("Saindo...")
