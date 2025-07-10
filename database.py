@@ -1,7 +1,7 @@
 #CRUD: adicionar, editar, deletar, listar
 despesas = []
 def adicionar_despesa(despesas):
-    despesas.append(despesas)
+    despesas.append(despesa)
 
 def listar_despesas():
     return despesas
