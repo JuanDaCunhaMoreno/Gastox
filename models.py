@@ -1,3 +1,4 @@
+#Classe despesa
 class Despesa:
     def __init__(self, id, valor, descricao, data, categoria):
         self.id = id
