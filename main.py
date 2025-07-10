@@ -1,3 +1,4 @@
+from relatorios import tot_categoria
 from models import Despesa
 from database import adicionar_despesa, listar_despesas, remover_despesas, editar_despesa
 from time import sleep
@@ -53,6 +54,13 @@ def executar():
         elif opcao == '4':
             for despesa in listar_despesas():
                 print(despesa)
+
+        elif opcao == '5':
+            totais = tot_categoria(listar_despesas())
+            print("\nTotal de gastos por categoria: ")
+            for categoria, total in totais.items():
+                print(f"{categoria}: R$ {total:.2f}")
+
         elif opcao == '0':
             print("Saindo...")
             sleep(0.5)
