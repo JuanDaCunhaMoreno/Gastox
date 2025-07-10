@@ -1,17 +1,18 @@
 #CRUD: adicionar, editar, deletar, listar
 despesas = []
+proximo_id = 1 #Contador inicial
 def adicionar_despesa(despesa):
     despesas.append(despesa)
 
 def listar_despesas():
     return despesas
 
-def remover_despesas(id):
+def remover_despesa(id):
     for despesa in despesas:
         if despesa.id == id:
             despesas.remove(despesa)
             return True #Sucesso
-        return False #Não encontrou
+    return False #Não encontrou
 
 def editar_despesa(id, novo_valor= None, nova_descricao= None, nova_data= None, nova_categoria= None):
     for despesa in despesas:
@@ -27,3 +28,8 @@ def editar_despesa(id, novo_valor= None, nova_descricao= None, nova_data= None, 
             return True #Sucesso
     return False #Não encontrou
     
+def gerar_id():
+    global proximo_id
+    id_atual = proximo_id
+    proximo_id += 1
+    return str(id_atual) #Retornar como string
