@@ -1,12 +1,12 @@
 #CRUD: adicionar, editar, deletar, listar
 despesas = []
-def adicionar_despesa(despesas):
+def adicionar_despesa(despesa):
     despesas.append(despesa)
 
 def listar_despesas():
     return despesas
 
-def remover_despesas():
+def remover_despesas(id):
     for despesa in despesas:
         if despesa.id == id:
             despesas.remove(despesa)
@@ -25,5 +25,5 @@ def editar_despesa(id, novo_valor= None, nova_descricao= None, nova_data= None, 
             if nova_categoria is not None:
                 despesa.categoria = nova_categoria
             return True #Sucesso
-        return False #Não encontrou
+    return False #Não encontrou
     
