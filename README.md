@@ -33,9 +33,9 @@ Sistema simples de controle de gastos pessoais via terminal, com suporte a cadas
 ## 🧱 Estrutura do Projeto
 
 Gastox/
-├── main.py # Ponto de entrada e menu
-├── models.py # Classe Despesa
-├── database.py # Funções CRUD
-├── relatorios.py # Estatísticas e totais
-├── exportador.py # Exportação para CSV
-├── README.md # Este arquivo
+- ├── main.py # Ponto de entrada e menu
+- ├── models.py # Classe Despesa
+- ├── database.py # Funções CRUD
+- ├── relatorios.py # Estatísticas e totais
+- ├── exportador.py # Exportação para CSV
+- ├── README.md # Este arquivo
