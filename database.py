@@ -5,4 +5,12 @@ def adicionar_despesa(despesas):
 def listar_despesas():
     return despesas
 
-def editar_despesas():
+def remover_despesas():
+    for despesa in despesas:
+        if despesa.id == id:
+            despesas.remove(despesa)
+            return True
+        return False
+
+
+    
