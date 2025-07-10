@@ -1,6 +1,6 @@
 from relatorios import tot_categoria, estat_gerais
 from models import Despesa
-from database import adicionar_despesa, listar_despesas, remover_despesas, editar_despesa
+from database import adicionar_despesa, listar_despesas, remover_despesa, editar_despesa, gerar_id
 from time import sleep
 from exportador import exportar_despesas
 
@@ -19,8 +19,12 @@ def executar():
         exibir_menu()
         opcao = input("Escolha uma opção: ")
         if opcao == '1':
-            id = input("ID: ")
-            valor = float(input("Valor: "))
+            id = gerar_id()
+            try:
+                valor = float(input("Valor: "))
+            except ValueError:
+                print("Valor inválido!. Use (.) para separar os centavos")
+                continue
             descricao = input("Descrição: ")
             data = input("Data: ")
             categoria = input("Categoria: ")
